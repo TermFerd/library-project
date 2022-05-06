@@ -6,6 +6,19 @@
 	<title>Page Title</title>
 </head>
 <body>
+	<div class="form-wrapper">
+    	<form onsubmit="event.preventDefault()">
+    	   <label for="name">Book Name:</label>
+   		   <input class="input" id="title" type="text" />
+  		   <label for="author">Author:</label>
+  		   <input class="input" id="author" type="text" />
+  		   <label for="pages">Page Count:</label>
+ 		   <input class="input" id="pages" type="text" />
+ 		   <label for="read">Read Status:</label>
+ 		    <input type="checkbox" id="read" name="read" checked>
+	        <button class="btn" id="submitBtn">Submit</button>
+        </form>
+    </div>
  <script src="script.js"></script>
 </body>
 </html>

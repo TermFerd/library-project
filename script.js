@@ -1,28 +1,50 @@
 
+ // the input fields
+
+const titleInput = document.querySelector('#title');
+const authorInput = document.querySelector('#author');
+const pagesInput = document.querySelector('#pages');
+const readInput = document.querySelector('#read');
+const submitBtn = document.getElementById('submitBtn');
+
 let myLibrary = [];
 
-function Book(title, author, pages, readYet) {
+  // book constructor
+
+function Book(title, author, pages) {
   this.title = title;
-  this.auther = author;
+  this.author = author;
   this.pages = pages;
-  this.readYet = readYet;
-  this.info = function() {
-    return (title + " by " + author + ", " + pages + " pages, " + readYet + '.')
-  }
 }
 
-function addBookToLibrary() {
-  // do stuff here
+  // variable to add new book, display it & reset fields
+
+const addBookToLibrary = function() {
+  title = titleInput.value;
+  author = authorInput.value;
+  pages = pagesInput.value;
+  status = readInput.checked;
+
+  let newBook = new Book(title, author, pages, status);
+
+  myLibrary.push(newBook);
+  formReset();
+
 }
 
+ // the main submit button
+
+submitBtn.addEventListener('click', addBookToLibrary);
+
+ // the additional processes (that happen when you add a book)
+
+const formReset = () => {
+  titleInput.value = '';
+  authorInput.value = '';
+  pagesInput.value = '';
+  readInput.value = '';
+};
 
 
 
-
-
-
-/*code block
-
-const theHobbit = new Book('Mist', 'J.R.R. Tolkien', '295', 'not read yet')
-
-*/
+console.log(myLibrary)
