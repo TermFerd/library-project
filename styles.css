@@ -1,29 +1,101 @@
 * {
 	box-sizing: border-box;
-    font-family: basic-sans;
+    font-family: roboto;
     color: black;
     font-size: 16px;
 }
 
+/* Root */
+
+
 html, body {    
 	margin: 0;
-    background-color: #cb9824;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
 }
 
-.container {
-    height: 100%;
+.wrapper {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
+/* navigation */
 
 .nav {
-    height: 5%;
-    min-height: 30px;
+    display: flex;
+    height: 6em;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0.1em 0.4em;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+}
+
+.nav.box {
+    display: flex;
+    padding: 2em;
+    background-color: white;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
+
+h1 {
+    font-size: 2em;
+}
+
+.btn {
+    display: flex;
+    font-size: 1.4em;
+    width: 4em;
+    height: 2em;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4em;
+}
+
+/* body */
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgrey;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Modal to add */
+
+.form.modal.addbook {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.bookcase {
+    height: 30%;
+    width: 100%;
+}
+
+
+
+

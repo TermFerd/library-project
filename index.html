@@ -3,16 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
 	<title>Page Title</title>
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper">
 		<div class="nav">
-			<h1>Knowledge Bank</h1>
-			<div class="login">Log in</div>
+			<div class="nav box">
+				<h1>Knowledge Bank</h1>
+				<div class="btn" id="login">Log in</div>
+			</div>
 		</div>
-		<div class="main container">
-			<div class="form-wrapper">
+		<div class="main-container">
+			<div class="form modal addbook">
 	    		<form onsubmit="event.preventDefault()">
 	    	   		<label for="name">Book Name:</label>
 	   		   		<input class="input" id="title" type="text" />
@@ -23,7 +26,10 @@
 	 		   		<label for="read">Read Status:</label>
 	 		    	<input type="checkbox" id="read" name="read" checked>
 		        	<button class="btn" id="submitBtn">Submit</button>
-	        	</form>
+	        	</form>	
+	    	</div>
+	    	<div class="bookcase">
+	    		
 	    	</div>
     	</div>
     </div>
