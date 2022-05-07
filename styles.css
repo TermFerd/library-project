@@ -72,7 +72,7 @@ h1 {
     flex-direction: column;
 }
 
-/* Modal to add */
+/* Modal to add a book */
 
 .form.modal.addbook {
     width: 100%;
@@ -94,7 +94,20 @@ form {
 .bookcase {
     height: 30%;
     width: 100%;
+    padding: 4em;
 }
+
+
+/* Book appended child */
+
+.bookcase-book {
+    display: flex;
+    height: 4em;
+    width: 4em;
+    background-color: red;
+}
+
+
 
 
 

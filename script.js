@@ -6,10 +6,11 @@ const authorInput = document.querySelector('#author');
 const pagesInput = document.querySelector('#pages');
 const readInput = document.querySelector('#read');
 const submitBtn = document.getElementById('submitBtn');
+const bookCase = document.querySelector('.bookcase')
 
 let myLibrary = [];
 
-  // book constructor
+  // book constructor (details needed for a book)
 
 function Book(title, author, pages) {
   this.title = title;
@@ -29,6 +30,7 @@ const addBookToLibrary = function() {
 
   myLibrary.push(newBook);
   formReset();
+  createBook();
 
 }
 
@@ -36,7 +38,7 @@ const addBookToLibrary = function() {
 
 submitBtn.addEventListener('click', addBookToLibrary);
 
- // the additional processes (that happen when you add a book)
+ // resetting the form
 
 const formReset = () => {
   titleInput.value = '';
@@ -45,6 +47,17 @@ const formReset = () => {
   readInput.value = '';
 };
 
+ // creating a new book 
 
+const createBook = (item) => {
+  const div = document.createElement('div');
+  const newBookTitle = document.createElement('h3');
+
+  div.className = "bookcase-book";
+  bookCase.appendChild(div);
+
+  
+
+};
 
 console.log(myLibrary)
