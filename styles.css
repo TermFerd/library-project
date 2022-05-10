@@ -102,6 +102,8 @@ form {
 
 .bookcase-book {
     display: flex;
+    flex-direction: column;
+    align-content: flex-start;
     height: 4em;
     width: 4em;
     background-color: red;

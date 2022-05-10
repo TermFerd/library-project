@@ -48,13 +48,31 @@ const formReset = () => {
 
 const createBook = (item) => {
   const div = document.createElement('div');
-  const newBookTitle = document.createElement('h3');
+  const removeBtn = document.createElement('button');
+  const h3Title = document.createElement('h3');
+  const pAuthor = document.createElement('p');
+  const pPages = document.createElement('p');
 
   div.className = "bookcase-book";
   bookCase.appendChild(div);
 
-  
+  h3Title.innerText = item.title;
+  pAuthor.innerText = item.author;
+  pPages.innerText = item.pages;
+
+  div.appendChild(h3Title);
+  div.appendChild(pAuthor);
+  div.appendChild(pPages);
+  div.appendChild(removeBtn);
+
+
 
 };
 
-console.log(myLibrary)
+console.log(myLibrary);
+
+
+
+
+
+
