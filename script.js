@@ -15,14 +15,16 @@ function Book(title, author, pages) {
   this.title = title;
   this.author = author;
   this.pages = pages;
+  this.id = title.slice(0, 3).toUpperCase() + pages;
 }
 
   // variable to add new book, display it & reset fields
 
-const addBookToLibrary = function() {
+const addBookToLibrary = () => {
   title = titleInput.value;
   author = authorInput.value;
   pages = pagesInput.value;
+  id = this.id;
 
   let newBook = new Book(title, author, pages);
 
@@ -32,19 +34,7 @@ const addBookToLibrary = function() {
 
 }
 
- // the main submit button
-
-submitBtn.addEventListener('click', addBookToLibrary);
-
- // resetting the form
-
-const formReset = () => {
-  titleInput.value = '';
-  authorInput.value = '';
-  pagesInput.value = '';
-};
-
- // creating a new book 
+ // displaying a new book 
 
 const createBook = (item) => {
   const div = document.createElement('div');
@@ -56,17 +46,27 @@ const createBook = (item) => {
   div.className = "bookcase-book";
   bookCase.appendChild(div);
 
-  h3Title.innerText = item.title;
-  pAuthor.innerText = item.author;
-  pPages.innerText = item.pages;
+  h3Title.innerText = myLibrary.at(-1).title;
+  pAuthor.innerText = myLibrary.at(-1).author;
+  pPages.innerText = myLibrary.at(-1).pages;
 
   div.appendChild(h3Title);
   div.appendChild(pAuthor);
   div.appendChild(pPages);
   div.appendChild(removeBtn);
 
+};
 
+ // the main submit button
 
+submitBtn.addEventListener('click', addBookToLibrary);
+
+ // resetting the form
+
+const formReset = () => {
+  titleInput.value = '';
+  authorInput.value = '';
+  pagesInput.value = '';
 };
 
 console.log(myLibrary);
