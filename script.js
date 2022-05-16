@@ -7,7 +7,13 @@ const pagesInput = document.querySelector('#pages');
 const submitBtn = document.getElementById('submitBtn');
 const bookCase = document.querySelector('.bookcase')
 
-let myLibrary = [];
+
+function modalOpen() {
+  let modal = document.getElementById("#modalAddBook");
+  modal.style.display = 'block';
+}
+
+const myLibrary = [];
 
   // book constructor (details needed for a book)
 
@@ -31,10 +37,12 @@ const addBookToLibrary = () => {
   myLibrary.push(newBook);
   formReset();
   createBook();
-
 }
 
- // displaying a new book 
+// update books (this is used to reset after you remove a book too)
+
+
+// displaying a new book 
 
 const createBook = (item) => {
   const div = document.createElement('div');
@@ -49,11 +57,19 @@ const createBook = (item) => {
   h3Title.innerText = myLibrary.at(-1).title;
   pAuthor.innerText = myLibrary.at(-1).author;
   pPages.innerText = myLibrary.at(-1).pages;
+  removeBtn.textContent = 'Remove';
 
   div.appendChild(h3Title);
   div.appendChild(pAuthor);
   div.appendChild(pPages);
   div.appendChild(removeBtn);
+
+  removeBtn.addEventListener('click', () => {
+    myLibrary.splice(myLibrary.indexOf(item), 1);
+
+  bookCase.removeChild(div);
+    
+  });
 
 };
 

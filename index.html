@@ -15,7 +15,8 @@
 			</div>
 		</div>
 		<div class="main-container">
-			<div class="form modal addbook">
+			<button class="addItem" id="newBtn" onclick="modalOpen()">+</button>
+			<div class="modal" id="modalAddBook">
 	    		<form onsubmit="event.preventDefault()">
 	    	   		<label for="name">Book Title:</label>
 	   		   		<input class="input" id="title" type="text" />
