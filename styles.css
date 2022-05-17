@@ -144,7 +144,8 @@ form {
     width: 100%;
     padding: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    grid-template-columns: repeat(auto-fill, 18em);
+    grid-auto-rows: 12em;
     grid-gap: 2em;
     align-content: flex-start;
     justify-content: flex-start;
