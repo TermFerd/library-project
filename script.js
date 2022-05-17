@@ -4,18 +4,32 @@
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const pagesInput = document.querySelector('#pages');
-const submitBtn = document.getElementById('submitBtn');
-const bookCase = document.querySelector('.bookcase')
+const bookCase = document.querySelector('.bookcase');
+const submitBtn = document.querySelector('#submitBtn');
 
 
-function modalOpen() {
-  let modal = document.getElementById("#modalAddBook");
-  modal.style.display = 'block';
-}
+// the modal add book popup button
+
+const modalBtn = document.querySelector('#modalBtn');
+const modalBg = document.querySelector('.modal-bg'); 
+const modalClose = document.querySelector('.modal-close');
+
+modalBtn.addEventListener('click', function(){
+  modalBg.classList.add('bg-active');
+});
+
+modalClose.addEventListener('click', function(){
+  modalBg.classList.remove('bg-active');
+});
+
+
+
+
+// the big array of items
 
 const myLibrary = [];
 
-  // book constructor (details needed for a book)
+// book constructor (details needed for a book)
 
 function Book(title, author, pages) {
   this.title = title;

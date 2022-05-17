@@ -93,12 +93,21 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal {
     width: 40%;
     height: 50%;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -108,24 +117,45 @@ h1 {
 
 form {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
     flex-direction: column;
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    font-weight: bold;
+    padding-right: 0.2em;
+    cursor: pointer;
+}
+
+.grid-wrapper {
+    width: 100%;
+    padding: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .bookcase {
     width: 100%;
-    padding: 0.75em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    grid-gap: 2rem;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 
 /* Book appended child */
 
 .bookcase-book {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
+    display: block;
     height: 4em;
     width: 4em;
     background-color: red;
