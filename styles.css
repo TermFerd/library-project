@@ -104,27 +104,34 @@ h1 {
 .modal {
     width: 40%;
     height: 50%;
-    display: flex;
+    display: block;
+    height: 16em;
+    width: 24em;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: yellow;
     z-index: 2;
 }
 
 form {
     display: flex;
+    padding: 1.2em;
     align-items: flex-start;
     justify-content: space-evenly;
     flex-direction: column;
+}
 
+input {
+    border: none;
+}
+
+label {
+    border: none;
 }
 
 .modal-close {
     position: absolute;
-    top: 0.2em;
-    right: 0.2em;
+    top: 0.6em;
+    right: 0.6em;
     font-weight: bold;
     padding-right: 0.2em;
     cursor: pointer;
