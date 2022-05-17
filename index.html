@@ -10,23 +10,26 @@
 	<div class="wrapper">
 		<div class="nav">
 			<div class="nav box">
-				<h1>Weekly Wins</h1>
+				<h1>Reflector</h1>
 				<div class="btn" id="login">Log in</div>
 			</div>
 		</div>
 		<div class="main-container">
-			<button class="addItem" id="newBtn" onclick="modalOpen()">+</button>
-			<div class="modal" id="modalAddBook">
-	    		<form onsubmit="event.preventDefault()">
-	    	   		<label for="name">Book Title:</label>
-	   		   		<input class="input" id="title" type="text" />
-	  		   		<label for="author">Author:</label>
-	  		   		<input class="input" id="author" type="text" />
-	  		   		<label for="pages">Pages:</label>
-	 		   		<input class="input" id="pages" type="text" />
-		        	<button class="btn" id="submitBtn">Submit</button>
-	        	</form>	
+			<button class="btn add-item" id="newBtn" onclick="modalOpen()">+</button>
+			<div class="modal-bg">
+				<div class="modal" id="modalAddBook">
+		    		<form onsubmit="event.preventDefault()">
+		    	   		<label for="name">Book Title:</label>
+		   		   		<input class="input" id="title" type="text" />
+		  		   		<label for="author">Author:</label>
+		  		   		<input class="input" id="author" type="text" />
+		  		   		<label for="pages">Pages:</label>
+		 		   		<input class="input" id="pages" type="text" /><br>
+			        	<button class="btn" id="submitBtn">Submit</button>
+		        	</form>	
+		    	</div>
 	    	</div>
+
 	    	<div class="bookcase">
 	    	</div>
     	</div>
