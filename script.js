@@ -48,9 +48,15 @@ const addBookToLibrary = () => {
 
   let newBook = new Book(title, author, pages);
 
-  myLibrary.push(newBook);
-  formReset();
-  createBook();
+ 
+  if (title === '' && author === '' && pages === '') {
+    alert('no input!')
+  } else {
+    myLibrary.push(newBook);
+    createBook();
+    formReset();
+    submitClose();
+  } 
 }
 
 // update books (this is used to reset after you remove a book too)
@@ -87,9 +93,16 @@ const createBook = (item) => {
 
 };
 
+
+ // closing modal on submit
+
+const submitClose = () => {
+  modalBg.classList.remove('bg-active');
+};
+
  // the main submit button
 
-submitBtn.addEventListener('click', addBookToLibrary);
+submitBtn.addEventListener('click', addBookToLibrary,);
 
  // resetting the form
 
@@ -98,6 +111,7 @@ const formReset = () => {
   authorInput.value = '';
   pagesInput.value = '';
 };
+
 
 console.log(myLibrary);
 

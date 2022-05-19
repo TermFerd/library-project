@@ -73,6 +73,10 @@ h1 {
 
 /* Add button */
 
+button {
+    cursor: pointer;
+}
+
 .add-item {
     margin: 1.5em;
 }
