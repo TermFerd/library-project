@@ -48,17 +48,6 @@ h1 {
     font-size: 2em;
 }
 
-.btn {
-    display: flex;
-    font-size: 1.4em;
-    width: 4em;
-    height: 2em;
-    background-color: grey;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.4em;
-}
-
 /* body */
 
 .main-container {
@@ -73,12 +62,38 @@ h1 {
 
 /* Add button */
 
+.btn {
+    display: flex;
+    font-size: 1.0em;
+    width: 6em;
+    height: 2.6em;
+    background-color: #2A9E51;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6.4em;
+}
+
 button {
     cursor: pointer;
 }
 
 .add-item {
-    margin: 1.5em;
+    margin: 0.2em;
+    background-color: rgba(255, 0, 0, 0.0);
+    font-size: 2.4em;
+    color: #565656;
+    border: none;
+
+}
+
+.add-item:hover {
+    color: black;
+}
+
+.submit-item {
+    width: 100%;
+    border-radius: 0.4em;
 }
 
 /* Modal to add a book */
@@ -106,19 +121,18 @@ button {
 }
 
 .modal {
-    width: 40%;
-    height: 50%;
     display: block;
-    height: 16em;
-    width: 24em;
+    height: 28em;
+    width: 42em;
     position: relative;
     background-color: yellow;
     z-index: 2;
+    border-radius: 0.4em;
 }
 
 form {
     display: flex;
-    padding: 1.2em;
+    padding: 1.8em;
     align-items: flex-start;
     justify-content: space-evenly;
     flex-direction: column;
@@ -126,6 +140,8 @@ form {
 
 input {
     border: none;
+    width: 100%;
+    padding: 0.2em;
 }
 
 label {

@@ -11,7 +11,7 @@
 		<div class="nav">
 			<div class="nav box">
 				<h1>Reflector Journal</h1>
-				<div class="btn" id="login">Log in</div>
+				<div class="btn" id="login">Sign In</div>
 			</div>
 		</div>
 		<div class="main-container">
@@ -20,12 +20,12 @@
 				<div class="modal" id="modalAddBook">
 		    		<form onsubmit="event.preventDefault()">
 		    	   		<label for="name">Summary:</label>
-		   		   		<input class="input" id="title" type="text" />
+		   		   		<input class="input" id="title" type="text" placeholder="" maxlength="30"/>
 		  		   		<label for="author">Feeling:</label>
-		  		   		<input class="input" id="author" type="text" />
+		  		   		<input class="input" id="author" type="text" placeholder="Proud" maxlength="10"/>
 		  		   		<label for="pages">Description:</label>
-		 		   		<input class="input" id="pages" type="text" /><br>
-			        	<button class="btn" id="submitBtn">Submit</button>
+		 		   		<input class="input" id="pages" type="text" placeholder="" maxlength="250" style="height:14em";/><br>
+			        	<button class="btn submit-item" id="submitBtn">Submit</button>
 		        	</form>
 		        	<span class="modal-close">X</span>
 		    	</div>
