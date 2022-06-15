@@ -66,22 +66,25 @@ const addBookToLibrary = () => {
 
 const createBook = (item) => {
   const div = document.createElement('div');
+  const divTop = document.createElement('div');
   const removeBtn = document.createElement('button');
   const h3Title = document.createElement('h3');
-  const pAuthor = document.createElement('p');
+  const pAuthor = document.createElement('h4');
   const pPages = document.createElement('p');
 
   div.className = "bookcase-book";
+  divTop.className = "topwrapper";
   removeBtn.className = "removebtn";
   bookCase.appendChild(div);
+  div.appendChild(divTop);
 
   h3Title.innerText = myLibrary.at(-1).title;
   pAuthor.innerText = myLibrary.at(-1).author;
   pPages.innerText = myLibrary.at(-1).pages;
-  removeBtn.textContent = 'Remove -';
+  removeBtn.textContent = 'Remove';
 
-  div.appendChild(h3Title);
-  div.appendChild(pAuthor);
+  divTop.appendChild(h3Title);
+  divTop.appendChild(pAuthor);
   div.appendChild(pPages);
   div.appendChild(removeBtn);
 
