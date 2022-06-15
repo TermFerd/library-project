@@ -61,8 +61,6 @@ h1 {
     margin-bottom: 2em;
 }
 
-/* Add button */
-
 .btn {
     display: flex;
     font-size: 1.0em;
@@ -73,13 +71,32 @@ h1 {
     align-items: center;
     justify-content: center;
     border-radius: 6.4em;
+    cursor: pointer;
 }
 
 button {
     cursor: pointer;
 }
 
+.btn:hover {
+    background-color: #248946;
+}
+
+.btn:active {
+  background-color: #248946;
+  transform: translateY(2px);
+}
+
+/* Add button */
+
 .add-item {
+    display: flex;
+    width: 6em;
+    height: 2.6em;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6.4em;
     margin: 0.2em;
     background-color: rgba(255, 0, 0, 0.0);
     font-size: 2.4em;
@@ -182,6 +199,15 @@ label {
     border-right: none;
 }
 
+.submit-item:hover {
+    background-color: #248946;
+}
+
+.submit-item:active {
+  background-color: #248946;
+  transform: translateY(2px);
+}
+
 .grid-wrapper {
     width: 100%;
     display: flex;
@@ -275,6 +301,11 @@ p {
 
 .removebtn:hover {
     background-color: darkgrey;
+}
+
+.removebtn:active {
+  background-color: grey;
+  transform: translateY(2px);
 }
 
 
