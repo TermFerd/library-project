@@ -64,6 +64,8 @@ const addBookToLibrary = () => {
 
 // displaying a new book 
 
+
+
 const createBook = (item) => {
   const div = document.createElement('div');
   const divTop = document.createElement('div');
@@ -75,18 +77,18 @@ const createBook = (item) => {
   div.className = "bookcase-book";
   divTop.className = "topwrapper";
   removeBtn.className = "removebtn";
-  bookCase.appendChild(div);
-  div.appendChild(divTop);
+  bookCase.prepend(div);
+  div.append(divTop);
 
   h3Title.innerText = myLibrary.at(-1).title;
   pAuthor.innerText = myLibrary.at(-1).author;
   pPages.innerText = myLibrary.at(-1).pages;
   removeBtn.textContent = 'Remove';
 
-  divTop.appendChild(h3Title);
-  divTop.appendChild(pAuthor);
-  div.appendChild(pPages);
-  div.appendChild(removeBtn);
+  divTop.append(h3Title);
+  divTop.append(pAuthor);
+  div.append(pPages);
+  div.append(removeBtn);
 
   removeBtn.addEventListener('click', () => {
     myLibrary.splice(myLibrary.indexOf(item), 1);
