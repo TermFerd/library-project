@@ -224,6 +224,7 @@ label {
     padding-right: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fill, 18em);
+    grid-auto-flow: dense;
     grid-gap: 2em;
     align-content: flex-start;
     justify-content: space-evenly;
