@@ -72,12 +72,13 @@ const createBook = (item) => {
   const pPages = document.createElement('p');
 
   div.className = "bookcase-book";
+  removeBtn.className = "removebtn";
   bookCase.appendChild(div);
 
   h3Title.innerText = myLibrary.at(-1).title;
   pAuthor.innerText = myLibrary.at(-1).author;
   pPages.innerText = myLibrary.at(-1).pages;
-  removeBtn.textContent = 'Remove';
+  removeBtn.textContent = 'Remove -';
 
   div.appendChild(h3Title);
   div.appendChild(pAuthor);

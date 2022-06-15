@@ -84,7 +84,6 @@ button {
     font-size: 2.4em;
     color: #565656;
     border: none;
-
 }
 
 .add-item:hover {
@@ -94,6 +93,26 @@ button {
 .submit-item {
     width: 100%;
     border-radius: 0.4em;
+}
+
+.removebtn {
+    display: flex;
+    font-size: 1.0em;
+    font-weight: bold;
+    width: 5.4em;
+    height: 2.2em;
+    background-color: #207BB0;
+    border-color: #142907;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.removebtn:hover {
+    background-color: #11425E;
 }
 
 /* Modal to add a book */
@@ -189,9 +208,10 @@ label {
 
 .bookcase-book {
     display: block;
-    height: 100%;
+    height: 16em;
     width: 100%;
     background-color: white;
+    padding: 1em;
     border-radius: 0.4em;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0.1em 0.4em;
 }
