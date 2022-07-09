@@ -7,7 +7,6 @@ const pagesInput = document.querySelector('#pages');
 const bookCase = document.querySelector('.bookcase');
 const submitBtn = document.querySelector('#submitBtn');
 
-
 // the modal add book popup button
 
 const modalBtn = document.querySelector('#modalBtn');
@@ -21,9 +20,6 @@ modalBtn.addEventListener('click', function(){
 modalClose.addEventListener('click', function(){
   modalBg.classList.remove('bg-active');
 });
-
-
-
 
 // the big array of items
 
@@ -49,8 +45,8 @@ const addBookToLibrary = () => {
   let newBook = new Book(title, author, pages);
 
  
-  if (title === '' && author === '' && pages === '') {
-    alert('no input!')
+  if (title === '' || author === '' || pages === '') {
+    alert('Please enter a summary, feeling and description before submitting!')
   } else {
     myLibrary.push(newBook);
     createBook();
@@ -117,6 +113,22 @@ const formReset = () => {
   authorInput.value = '';
   pagesInput.value = '';
 };
+
+
+//character counter 
+
+let textArea = document.getElementById("pages");
+let characterCounter = document.getElementById("char_count");
+const maxNumOfChars = 450;
+
+const countCharacters = () => {
+        let numOfEnteredChars = textArea.value.length;
+    let counter = maxNumOfChars - numOfEnteredChars;
+    characterCounter.textContent = counter + "/450";
+};
+
+textArea.addEventListener("input", countCharacters);
+
 
 
 console.log(myLibrary);
