@@ -179,6 +179,12 @@ label {
     border: none;
 }
 
+.charcount {
+    align-self: flex-end;
+    color: #2A9E51;
+    font-size: 0.8em;
+}
+
 .modal-close {
     position: absolute;
     top: 0.6em;
